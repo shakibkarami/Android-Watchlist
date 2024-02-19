@@ -37,13 +37,15 @@ import androidx.navigation.compose.rememberNavController
 import com.practice.watchlist.movieList.util.Screen
 import com.practice.watchlist.presentation.MovieListUiEvent
 import com.practice.watchlist.presentation.MovieListViewModel
+import com.practice.watchlist.presentation.PopularMovieScreen
+import com.practice.watchlist.presentation.components.UpcomingMovieScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(navController: NavHostController) {
 
     val movieListViewModel = hiltViewModel<MovieListViewModel>()
-    val movieState = movieListViewModel.movieListState.collectAsState().value
+    val movieListState = movieListViewModel.movieListState.collectAsState().value
     val bottomNavController = rememberNavController()
 
     Scaffold(
@@ -55,7 +57,7 @@ fun HomeScreen(navController: NavHostController) {
             TopAppBar(
                 title = {
                     Text(
-                        text = if (movieState.isCurrentPopularScreen)
+                        text = if (movieListState.isCurrentPopularScreen)
                             "Popular Movies"
                         else
                             "Upcoming Movies",
@@ -72,12 +74,16 @@ fun HomeScreen(navController: NavHostController) {
             .padding(it)) {
             NavHost(navController = bottomNavController, startDestination = Screen.PopularMovieList.route) {
                 composable(Screen.PopularMovieList.route){
-//                    PopularMovieScreen()
+                    PopularMovieScreen(navController = navController,
+                        movieListState = movieListState,
+                        onEvent = movieListViewModel::onEvent)
                 }
                 composable(Screen.UpcomingMovieList.route){
-//                    UpcomingMovieScreen()
+                    UpcomingMovieScreen(navController = navController,
+                        movieListState = movieListState,
+                        onEvent = movieListViewModel::onEvent)
                 }
-            }
+                }
         }
     }
 }

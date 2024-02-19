@@ -1,8 +1,8 @@
 package com.practice.watchlist.presentation
 
-import android.graphics.Movie
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.practice.watchlist.movieList.domain.model.Movie
 import com.practice.watchlist.movieList.domain.repository.MovieListRepository
 import com.practice.watchlist.movieList.util.Category
 import com.practice.watchlist.movieList.util.Resource

@@ -1,6 +1,7 @@
 package com.practice.watchlist.presentation
 
-import android.graphics.Movie
+import com.practice.watchlist.movieList.domain.model.Movie
+
 
 data class MovieListState(
     val isLoading: Boolean = false,
