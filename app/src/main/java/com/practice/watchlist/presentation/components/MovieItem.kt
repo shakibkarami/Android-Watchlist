@@ -1,5 +1,6 @@
 package com.practice.watchlist.presentation.components
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -54,6 +55,8 @@ fun MovieItem(
     val imageState = rememberAsyncImagePainter(model = ImageRequest.Builder(LocalContext.current)
         .data(MovieApi.IMAGE_BASE_URL + movie.backdrop_path)
         .size(Size.ORIGINAL).build()).state
+
+    Log.d("imageStates",MovieApi.IMAGE_BASE_URL + movie.backdrop_path)
 
     val defaultColor = MaterialTheme.colorScheme.secondaryContainer
     var dominantColor by remember {

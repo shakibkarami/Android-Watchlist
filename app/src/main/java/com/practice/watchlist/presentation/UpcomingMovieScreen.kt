@@ -1,4 +1,4 @@
-package com.practice.watchlist.presentation.components
+package com.practice.watchlist.presentation
 
 import android.widget.Space
 import androidx.compose.foundation.layout.Box

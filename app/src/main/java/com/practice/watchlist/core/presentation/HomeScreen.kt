@@ -1,6 +1,5 @@
 package com.practice.watchlist.core.presentation
 
-import android.graphics.drawable.Icon
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -17,10 +16,8 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarColors
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.asIntState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -38,7 +35,7 @@ import com.practice.watchlist.movieList.util.Screen
 import com.practice.watchlist.presentation.MovieListUiEvent
 import com.practice.watchlist.presentation.MovieListViewModel
 import com.practice.watchlist.presentation.PopularMovieScreen
-import com.practice.watchlist.presentation.components.UpcomingMovieScreen
+import com.practice.watchlist.presentation.UpcomingMovieScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
