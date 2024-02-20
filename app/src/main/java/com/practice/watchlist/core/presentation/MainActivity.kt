@@ -19,6 +19,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.practice.watchlist.details.presentation.DetailsScreen
 import com.practice.watchlist.movieList.util.Screen
 import com.practice.watchlist.presentation.MovieListViewModel
 import com.practice.watchlist.ui.theme.WatchlistTheme
@@ -47,7 +48,7 @@ class MainActivity : ComponentActivity() {
                         composable(Screen.Details.route + "/{movieId}", arguments = listOf(
                             navArgument("movieId") {type = NavType.IntType}
                         )) {navBackStackEntry ->
-                            //DetailsScreen(navBackStackEntry)
+                            DetailsScreen()
                         }
                     }
 

@@ -110,7 +110,7 @@ fun MovieItem(
         
         Spacer(modifier = Modifier.height(6.dp))
         
-        Text(modifier = Modifier.padding(start = 26.dp, end = 8.dp),
+        Text(modifier = Modifier.padding(start = 18.dp, end = 8.dp),
             text = movie.title,
             color = Color.White,
             fontSize = 15.sp,
