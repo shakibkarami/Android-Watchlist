@@ -170,21 +170,21 @@ fun DetailsScreen() {
 
                     Text(
                         modifier = Modifier.padding(start = 16.dp),
-                        text = "Language" + movie.original_language
+                        text = "Language: " + movie.original_language
                     )
 
                     Spacer(modifier = Modifier.height(10.dp))
 
                     Text(
                         modifier = Modifier.padding(start = 16.dp),
-                        text = "Release Date" + movie.release_date
+                        text = "Release Date: " + movie.release_date
                     )
 
                     Spacer(modifier = Modifier.height(10.dp))
 
                     Text(
                         modifier = Modifier.padding(start = 16.dp),
-                        text = movie.release_date + "Votes"
+                        text = movie.vote_count.toString() + " votes"
                     )
                 }
             }

@@ -53,10 +53,8 @@ fun MovieItem(
     navHostController: NavHostController
 ) {
     val imageState = rememberAsyncImagePainter(model = ImageRequest.Builder(LocalContext.current)
-        .data(MovieApi.IMAGE_BASE_URL + movie.backdrop_path)
+        .data(MovieApi.IMAGE_BASE_URL + movie.poster_path)
         .size(Size.ORIGINAL).build()).state
-
-    Log.d("imageStates",MovieApi.IMAGE_BASE_URL + movie.backdrop_path)
 
     val defaultColor = MaterialTheme.colorScheme.secondaryContainer
     var dominantColor by remember {
